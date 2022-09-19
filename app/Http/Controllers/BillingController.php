@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\PaymeRequest;
 use App\Repository\BillingContract\ConfirmBillingInterface;
 use App\Repository\BillingContract\CreateBillingInterface;
+use App\Repository\BillingRepository\PaymeBillingService;
 use App\Repository\PaymeRepository;
 use App\Service\PaymentService;
 use Illuminate\Http\Request;
@@ -18,7 +19,7 @@ class BillingController extends Controller
         $this->paymentService = $paymentService;
     }
 
-    public function payme(PaymeRequest $request, PaymeRepository $paymeRepository)
+    public function payme(PaymeRequest $request, PaymeBillingService $paymeRepository)
     {
         $dto = $request->validated();
         if ($dto['method'] == 'create') {

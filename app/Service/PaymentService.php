@@ -11,13 +11,11 @@ class PaymentService
 {
     public function create(CreateBillingInterface $createBilling, $dto)
     {
-        $data = $createBilling->create($dto);
-        return $data;
+        return $createBilling->create($dto);
     }
 
     public function perform(ConfirmBillingInterface $confirmBilling, $dto)
     {
-        $data = $confirmBilling->confirm($dto);
-        return $data;
+        return $confirmBilling->confirm($dto);
     }
 }

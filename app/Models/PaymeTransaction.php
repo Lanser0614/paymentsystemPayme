@@ -17,4 +17,5 @@ class PaymeTransaction extends Model
     ];
 
     protected $table = 'payme_transactions';
+
 }

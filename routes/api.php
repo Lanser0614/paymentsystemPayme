@@ -18,12 +18,12 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-
-Route::get('/test', function (Request $request) {
-    $data = (new \App\Service\GoogleSheetsService())->readSheets();
-
-    return response()->json($data);
-});
+//
+//Route::get('/test', function (Request $request) {
+//    $data = (new \App\Service\GoogleSheetsService())->readSheets();
+//
+//    return response()->json($data);
+//});
 
 Route::post('payme', [BillingController::class, 'payme']);
 Route::post('click', [BillingController::class, 'click']);
