@@ -25,10 +25,9 @@ class PaymeRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'transaction_id' => 'required|string',
-            'amount' => 'required|numeric',
-            'account' => 'required|numeric',
-            'method' => 'required|string'
+            'id' => 'required|numeric',
+            'method' => 'required|string',
+            'params' => 'required|array',
         ];
     }
 }

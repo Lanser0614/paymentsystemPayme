@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Service;
 
-use App\Repository\BillingContract\ConfirmBillingInterface;
-use App\Repository\BillingContract\CreateBillingInterface;
+use App\Service\BillingContract\ConfirmBillingInterface;
+use App\Service\BillingContract\CreateBillingInterface;
 
 class PaymentService
 {
